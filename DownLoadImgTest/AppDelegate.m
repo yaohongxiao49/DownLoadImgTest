@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YXLogByJson.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UITableView.appearance.estimatedRowHeight = 0;
+    UITableView.appearance.estimatedSectionFooterHeight = 0;
+    UITableView.appearance.estimatedSectionHeaderHeight = 0;
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    ViewController *rootVC = [[ViewController alloc] init];
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
