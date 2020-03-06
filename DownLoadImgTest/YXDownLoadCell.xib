@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="YXDownLoadCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXx-Kf-weF">
+                        <rect key="frame" x="12" y="12" width="51" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yR-8G-D3p">
+                        <rect key="frame" x="208" y="26" width="100" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="N3o-Ej-3H0"/>
+                            <constraint firstAttribute="height" constant="28" id="ZAW-bA-LUG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="下载">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="progressDownLoadBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GzS-kb-Bz3"/>
+                        </connections>
+                    </button>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wjp-gE-0c8">
+                        <rect key="frame" x="12" y="68" width="296" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="adb-RY-vbS"/>
+                        </constraints>
+                    </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-Bn-zqP">
+                        <rect key="frame" x="12" y="43" width="32.5" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Wjp-gE-0c8" secondAttribute="trailing" constant="12" id="1fy-Od-H4U"/>
+                    <constraint firstItem="Wjp-gE-0c8" firstAttribute="top" secondItem="kIx-Bn-zqP" secondAttribute="bottom" constant="10" id="8FE-bl-vgY"/>
+                    <constraint firstItem="Wjp-gE-0c8" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="1" id="DWf-AB-Uch"/>
+                    <constraint firstItem="UXx-Kf-weF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Q3w-f0-aVM"/>
+                    <constraint firstItem="3yR-8G-D3p" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QoI-Ry-DxU"/>
+                    <constraint firstAttribute="trailing" secondItem="3yR-8G-D3p" secondAttribute="trailing" constant="12" id="dHS-Ml-pvF"/>
+                    <constraint firstItem="Wjp-gE-0c8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="ezu-gE-CbY"/>
+                    <constraint firstItem="Wjp-gE-0c8" firstAttribute="leading" secondItem="kIx-Bn-zqP" secondAttribute="leading" id="kZz-Y1-Nc5"/>
+                    <constraint firstItem="UXx-Kf-weF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="td8-zS-IqU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="downLoadBtn" destination="3yR-8G-D3p" id="OzB-xb-Ryp"/>
+                <outlet property="progressLab" destination="kIx-Bn-zqP" id="AAP-EH-ZFw"/>
+                <outlet property="progressView" destination="Wjp-gE-0c8" id="4eE-xR-LMy"/>
+                <outlet property="showNameLab" destination="UXx-Kf-weF" id="6JO-vE-QLn"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="139.95535714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
